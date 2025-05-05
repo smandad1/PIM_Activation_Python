@@ -26,6 +26,7 @@ Activate all PIMs using Python
 ### Upcoming updates:
 
 - Will come up with the timing diff from the powershell script vs this solution.
+- Will add it to pypi so that it can be installed from there
 - Will add alias so that you can run the command from anywhere - <img src="https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/ApprovedChanges.svg" alt="Simple Icons" height="16" width="20">:
 - Will add more cli options on `starts-with` and `contains` which will activate only the ones that satisfy the conditions.
 
