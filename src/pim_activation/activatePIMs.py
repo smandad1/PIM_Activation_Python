@@ -1,5 +1,5 @@
 import argparse
-import json
+import asyncio
 import jwt
 import uuid
 import aiohttp
@@ -161,9 +161,7 @@ def parse_arguments():
                        help='delay in seconds between each role activation (default: 0.25)')
     return parser.parse_args()
 
-
-if __name__ == "__main__":
-    import asyncio
+def main():
     args = parse_arguments()
     asyncio.run(activate_pim_roles(
         batch_size=args.batch_size,
@@ -174,3 +172,6 @@ if __name__ == "__main__":
         retry_delay=args.retry_delay,
         delay=args.delay
     ))
+
+if __name__ == "__main__":
+    main()
