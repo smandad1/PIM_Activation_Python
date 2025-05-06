@@ -1,10 +1,15 @@
 # Activate All your PIMs
 Activate all PIMs using Python
 
+### Pre-Requiste
+- Python 3.1x [this was developed using 3.13]
+- install az cli - https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?pivots=msi
+  - run `az login` and successfully login to your subscription.
+
 #### Version 2.0 (Current Version) - 5/5/2025:
 - Steps to run it locally
   - Clone the repo
-  - Run `cd PIM_Activate_Python`
+  - Run `cd PIM_Activate_Python` until you are in the folder where `setup.py`.
   - Create a virtual environment (recommended)
     - for creating a virutal environment - `python -m venv .venv`
     - Activate the virtual environment (Windows) - `.venv\Scripts\activate`
@@ -48,4 +53,5 @@ Activate all PIMs using Python
   
 ### Notes:
 - When tried with no delay between the calls - we are getting 429. Hence, the introduction of the delay and 0.25 seems to be working.
+- Recent run with a batch size of 25 for 267 roles -> 282 seconds or 4.7 mins
 - I have been running with a batch size of 20 - seems to be working fine -will attempt with higher number and update here.
