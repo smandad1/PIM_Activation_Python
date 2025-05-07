@@ -1,7 +1,7 @@
 # Activate All your PIMs
 Activate all PIMs using Python
 
-### Pre-Requiste
+### Pre-Requistes
 - Python 3.1x [this was developed using 3.13]
 - install az cli - https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?pivots=msi
   - run `az login` and successfully login to your subscription.
@@ -30,11 +30,14 @@ Activate all PIMs using Python
 
 ### Upcoming updates:
 
-- Will come up with the timing diff from the powershell script vs this solution.
+- Will come up with the timing diff from the powershell script vs this solution - <img src="https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/ApprovedChanges.svg" alt="Simple Icons" height="16" width="20">
 - Will add it to pypi so that it can be installed from there
-- Will add alias so that you can run the command from anywhere - <img src="https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/ApprovedChanges.svg" alt="Simple Icons" height="16" width="20">:
+- Will add alias so that you can run the command from anywhere - <img src="https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/ApprovedChanges.svg" alt="Simple Icons" height="16" width="20">
 - Will add more cli options on `starts-with` and `contains` which will activate only the ones that satisfy the conditions.
 
+
+### Contact
+Please do ping smandadi@microsoft.com
 ----
 
 ### Previous Versions:
@@ -53,5 +56,7 @@ Activate all PIMs using Python
   
 ### Notes:
 - When tried with no delay between the calls - we are getting 429. Hence, the introduction of the delay and 0.25 seems to be working.
-- Recent run with a batch size of 25 for 267 roles -> 282 seconds or 4.7 mins
+- The Powershell script usually takes roughly ~20-25 mins vs the timings as below
+  - Recent run with a batch size of 25 for 267 roles -> 282 seconds or 4.7 mins: `activate_pims -b 35 -j "dev"`
+  - Recent run with a batch of 40 for 267 roles -> 203 seconds or 3.3 mins : `activate_pims -b 40 -j "dev" -d 0.15`
 - I have been running with a batch size of 20 - seems to be working fine -will attempt with higher number and update here.
