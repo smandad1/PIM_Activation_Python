@@ -57,6 +57,7 @@ Please do ping smandadi@microsoft.com
 ### Notes:
 - When tried with no delay between the calls - we are getting 429. Hence, the introduction of the delay and 0.25 seems to be working.
 - The Powershell script usually takes roughly ~20-25 mins vs the timings as below
+  - Recent run with a batch size of 60 for 267 roles -> 165 seconds or 2.7 mins: `activate_pims -b 60 -j "dev" -d 0.15 -mr 3`
   - Recent run with a batch size of 25 for 267 roles -> 282 seconds or 4.7 mins: `activate_pims -b 35 -j "dev"`
   - Recent run with a batch of 40 for 267 roles -> 203 seconds or 3.3 mins : `activate_pims -b 40 -j "dev" -d 0.15`
 - I have been running with a batch size of 20 - seems to be working fine -will attempt with higher number and update here.
